@@ -1,0 +1,41 @@
+body{
+    background-color: black;
+}
+#background {
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+  }
+.stars-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevent interference with page interactions */
+    z-index: 9 !important; /* Keeps stars above the background */
+  }
+  
+  .star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: white;
+    border-radius: 50%;
+    animation: blink 1.4s infinite ease-in-out;
+    opacity: 0.8;
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 0.2;
+    }
+}

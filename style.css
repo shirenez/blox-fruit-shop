@@ -1,0 +1,215 @@
+@font-face {
+    font-family: 'Madani Arabic';
+    src: url(/fonts/Madani_Arabic/Madani\ Regular.ttf);
+}
+@font-face {
+    font-family: 'Poppins';
+    src: url(/fonts/Poppins/SVN-Poppins-Regular.ttf);
+}
+@font-face {
+    font-family: 'Josefin Sans';
+    src: url(/fonts/Josefin_Sans/JosefinSans-Regular.ttf);
+}
+@font-face {
+    font-family: 'Monsterrat';
+    src: url(/fonts/Monsterrat/Montserrat-Regular.ttf);
+}
+@font-face {
+    font-family: 'Inter';
+    src: url(/fonts/Inter/Inter_18pt-Regular.ttf);
+}
+@font-face {
+    font-family: 'Fira Sans';
+    src: url(/fonts/Fira_Sans/FiraSans-Regular.ttf);
+}
+@font-face {
+    font-family: 'Boldini';
+    src: url(/fonts/Boldini/Boldini\ Regular.ttf);
+}
+@font-face {
+    font-family: 'Conneqt';
+    src: url(/fonts/Conneqt/Conneqt\ Regular.ttf);
+}
+@font-face {
+    font-family: 'Rubik';
+    src: url(/fonts/Rubik/static/Rubik-Regular.ttf);
+}
+body{
+    background-color: hsl(240, 7%, 4%);
+    z-index: -10;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+.container{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+}
+.home {
+    width: 100%;
+    top: 5%;
+    max-width: 1125px;
+    background-color: rgba(108, 108, 108, 0.05);
+    border: rgb(36, 40, 52, 0.5) 2px solid;
+    border-radius: 4px;
+    position: absolute;
+    padding: 40px 80px;
+    color: #f4f7ff;
+    line-height: 1.5;
+    font-family: 'Poppins';
+    letter-spacing: 0.35px;
+    font-weight: 400;
+    z-index: 10;
+    max-height: 80vh;
+    overflow-y: auto;
+    font-size: 20px;
+    backdrop-filter: blur(3px);
+}
+#background {
+    min-height: 100%;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: -1;
+  }
+.stars-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Prevent interference with page interactions */
+    z-index: 10; /* Keeps stars above the background */
+  }
+  
+  .star {
+    position: absolute;
+    width: 1.5px;
+    height: 1.5px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    animation: blink 1.4s infinite ease-in-out;
+    opacity: 0.8;
+  }
+  
+  @keyframes blink {
+    0%, 100% {
+      opacity: 0.8;
+    }
+    50% {
+      opacity: 0.1;
+    }
+}
+.star-4p{
+    width: 24px;
+    height: 24px;
+    transform: translateY(-11px);
+    margin: 0 4px;
+}
+.foot-dis{
+    padding-top: 40px;
+    display: flex;
+    justify-content: center;
+}
+.line {
+    display: inline-block;
+    width: 47.5%;
+    height: 2px;
+    margin: 0 5px;
+}
+.fade-left {
+    background: linear-gradient(to right, transparent, #3E3E45);
+}
+.fade-right {
+    background: linear-gradient(to left, transparent, #3E3E45);
+}
+.center{
+    text-align: center;
+}
+.center-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.fade-both {
+    border: none;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 2px;
+    width: 100%; /* This should be the width of the parent container */
+    position: relative;
+}
+
+.fade-both::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -20%;
+    height: 2px;
+    width: 140%;
+    background: linear-gradient(to right, transparent 10%, #4a4a53 50%, transparent 90%);
+}
+li{
+    list-style: none;
+}
+.highlight-beli{
+    color: #6fff65;
+}
+.highlight-fragment{
+    color: #B179FF;
+}
+.highlight-haki{
+    color: #727272;
+}
+.highlight-mastery{
+    color: rgb(94, 164, 255);
+}
+.highlight-boss{
+    color: rgb(255, 178, 77);
+}
+.highlight-melee{
+    color: #C56E60;
+}
+::-webkit-scrollbar {
+    width: 7px;
+  }
+  /* scrollbar background */
+  ::-webkit-scrollbar-track {
+      background: rgba(6, 7, 9, 0);
+      opacity: 0;
+    }
+    /* scrollbar moving part */
+    ::-webkit-scrollbar-thumb {
+      background: rgb(44, 47, 55);
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: rgba(36, 40, 52, 0.815);
+}
+.func-color a{
+    color: #008deb;;
+}
+.functional-link a {
+    background: linear-gradient(hsl(182, 100%, 94%), hsl(0, 0%, 100%));
+    background-size: 0 1px;
+    background-repeat: no-repeat;
+    background-position: 50% 87%;
+    transition: background-size 0.4s ease, background-position 0.4s ease;
+    text-decoration: none;
+    filter: brightness(100%);
+    transition: all 0.4s ease;
+}
+.functional-link a:hover {
+    background-size: 100% 1px;
+    background-position: 50% 87%;
+    opacity: 0.95;
+    transition: background-size 0.4s ease, background-position 0.4s ease;
+    color: #70fff3;
+    transition: all 0.4s ease;
+}
